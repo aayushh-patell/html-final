@@ -7,7 +7,136 @@
 </head>
 
 <body>
+    <h1> Book a Flight </h1>
 
+    <!-- Allows user to enter their address, postal code and city along with their name and email in specified text input areas -->
+    <form method = "GET">
+
+        <!-- 
+            Creates name text field for the user to fill out their full name
+            Text input allows for a user to input their own text information and can be limited by attributes such as maxlength
+        -->
+        <label for = "name"> <b> Full Name </b> </label>
+        <input type = "text" name = "name" placeholder = "John Smith" size = "30" id = "name"/>
+
+        <br/> <br/>
+
+        <!-- Creates email address text field for the user to tpye out their email address -->
+        <label for = "email"> <b> Email Address </b> </label>
+        <input type = "text" name = "email" placeholder = "jsmith@gmail.com" size = "30" id = "email"/>
+
+        <br/> <br/>
+
+        <!-- Creates address text input field for the user to fill out their street address -->
+        <label for = "addr"> <b> Address </b> </label>
+        <input type = "text" name = "address" placeholder = "123 Main Street" size = "30" id = "addr"/>
+    
+        <br/> <br/>
+    
+        <!-- Creates postal code text input field for the user to fill out their postal code -->
+        <label for = "postal"> <b> Postal Code </b> </label>
+        <input type = "text" name = "postal code" placeholder = "A1A 1A1" size = "30" id = "postal"/>
+    
+        <br/> <br/>
+    
+        <!-- Creates city text input field for the user to fill out their city -->
+        <label for = "city"> <b> City </b> </label>
+        <input type = "text" name = "city" placeholder = "Winnipeg" size = "30" id = "city"/>
+
+        <br/> <br/>
+    
+        <label for = "airline"> <b> Please Select an Airline </b> </label>
+    
+        <!-- 
+            Identifies 3 airline services for the user to select from using a drop down menu 
+            The select input type displays a drop down menu with a specified number of options for a user to choose from
+        -->
+        <select name = "airlines" id = "airlines">
+            <option value = "westjet"> WestJet </option>
+            <option value = "aircanada"> Air Canada </option>
+            <option value = "irishairlines"> Irish Airlines </option>
+        </select>
+
+        <p> <b> Please Select a Payment Method </b> </p>
+    
+        <!-- 
+            Creates debit option radio button
+            The radio input type creates multiple circular buttons from which the user must select one
+        -->
+        <input type = "radio" id = "debit" name = "payment method" value = "debit">
+        <label for = "debit"> Debit </label>
+    
+        <br/>
+    
+        <!-- Creates credit option radio button -->
+        <input type = "radio" id = "credit" name = "payment method" value = "credit">
+        <label for = "credit"> Credit </label>
+    
+        <br/>
+    
+        <!-- Creates PayPal option radio button, PayPal button is checked by default-->
+        <input type = "radio" id = "paypal" name = "payment method" value = "paypal" checked = "true">
+        <label for = "paypal"> PayPal </label>
+
+        <br/> <br/>
+
+        <!-- 
+            Creates departure date input field 
+            The date input field allows for a user to select any possible date, month and yyear
+        -->
+        <label for = "depart"> <b> Departure Date </b> </label>
+        <input type = "date" id = "depart" name = "depart">
+        
+        <br/> <br/>
+
+        <!-- Creates return date input field -->
+        <label for = "return"> <b> Return Date </b> </label>
+        <input type = "date" id = "return" name = "return">
+
+        <br/> <br/>
+
+        <!-- 
+            Creates submit button
+            A submit input type allows for the code to forward to input from the form to the server to be processed
+        -->
+        <input type = "submit" value = "Submit">
+
+        <br/> <br/>
+
+    </form>
+
+    <!-- Table displaying airline information including, airline name, estimated cost and a rating -->
+    <table>
+        
+        <tr>
+            <th> Airline </th>
+            <th> Estimated Price </th>
+            <th> Rating </th>
+        </tr>
+
+        <tr>
+            <td> WestJet </td>
+            <td> $1000 </td>
+            <td> 5 / 10 </td>
+        </tr>
+
+        <tr>
+            <td> Air Canada </td>
+            <td> $1200 </td>
+            <td> 9 / 10 </td>
+        </tr>
+
+        <tr>
+            <td> Irish Airlines </td>
+            <td> $700 </td>
+            <td> 2 / 10 </td>
+        </tr>
+        
+    </table>
+
+    <br/>
+
+    <!-- Link to home page -->
     <a href = "index.html"> Return to Home Page </a>
 
 </body>
